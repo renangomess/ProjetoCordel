@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+
+    --font1: verdana, Geneva, Tahoma, sans-serif; /* Font Padrao para Cab e Rod  */
+    --font2: 'Passion One', cursive; /* Para os Titulos */
+    --font3: 'Sriracha', cursive; /* Para Conteudo */
+
+}
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+
+html, body{
+
+   min-height: 100vh; /*Tamanho Minimum da altura por isso vh viwe port high*/
+   background-color: darkgray;
+   font-family: var(--font1);/* Da variavel criada por fontes  */
+
+}
+
+header {
+
+    background-color: black;
+    color: white; /* Cor da letra branca do header*/
+    text-align: center; /* Centralizou o header CORDEL MODERNO */
+
+
+}
+
+header > h1{
+
+     padding-top: 50px; /* espaco Em cima */
+     font-variant: small-caps; /* Maiusculo mas como camel case ou -> text-transform: uppercase; que ficara tudo maiusculo tambem*/
+     font-family: var(--font2);/* Da variavel criada por fontes  */
+
+
+     /* 10% vw view port width da largura da tela, o Jquery seria o ideal mas aqui e adaptavel. O Cabecalho aumenta e diminui quando aumentar e diminuir o tamanho da tela*/
+     font-size: 10vw;
+
+}
+
+header > p { /* Por Milton Duarte */
+
+    padding-bottom: 50px; /* Espaco em baixo */
+}
+
+header a, footer a {  /* Link do cabecalho e rodape  que so tem os dois mas colocamos o header se caso precisar para colocar link no conteudo*/
+
+    color: white;
+    text-decoration: none; /* Tirando o sublinhado */
+    font-weight: bolder; /* Colocando em Negrito   */
+}
+
+header a:hover, footer a:hover {/*Link do cabecalho e rodape  que so tem os dois mas colocamos o header se caso precisar para colocar link no conteudo*/
+
+    text-decoration: underline; /*Paasando o mouse em cima vira sublinhado  */
+
+}
+
+section { /* Section como todo tanto parar normal quanto para imagem */
+
+     padding-top: 10vh; /* Criando um padding da altura para das espaco para ter o efeito paralax */
+     padding-bottom: 10vh; /* Criando um padding da altura para das espaco para ter o efeito paralax */
+     line-height: 2em; /* Espacamento duplo entre as linhas  */
+     padding-left: 30px; /* Para dar um espaco como se fosse um TAB */
+     font-family: var(--font3);/* Da variavel criada por fontes  */
+     
+      /* 3.5 vw view port width da largura da tela, o Jquery seria o ideal mas aqui e adaptavel. O Cabecalho aumenta e diminui quando aumentar e diminuir o tamanho da tela*/
+     font-size: 3.5vw; 
+
+}
+
+section > p {
+
+    padding-bottom: 2.5em; /* Para dar espaco entre uma linha e outra no paragrafos do section */
+}
+
+
+section.normal{ /* Section das classes normal */
+
+    background-color: white;
+    color: black;
+}
+
+section.imagem{ /* Section das classes imagem */
+
+    background-color: rgb(77, 46, 46);
+    color: aliceblue;
+    box-shadow: inset 6px 6px 13px 0px black; /* Sombra para dentro */
+    background-attachment: fixed; /* Aqui da o efeito Paralax  */
+
+}
+
+section.imagem > p { /* Paragrafo que tiver dentro da section imagem */
+
+    background-color: rgba(0, 0, 0, 0.206);
+    padding: 5px; /* para dar um pequeno espaco  */
+    display: inline-block; /* Trasforma na caixa que se adapta o tamanho do conteudo  */
+    text-shadow: 2px 1px 0px black;/* Sombra no paragrafo*/
+}
+
+section#img01 { /*  Aqui o ID da imagem 01   */
+
+    /* coloca ../ para chamar a pasta  */
+    background-image: url("../imagens/background001.jpg");
+    background-position: right center; /* Direita centralizada */
+    background-size: cover; /* Para organizar a imagem  */
+
+}
+
+section#img02 {
+
+    /* coloca ../ para chamar a pasta  */
+    background-image: url("../imagens/background002.jpg");
+    background-size: cover;/* Para organizar a imagem  */
+
+}
+
+
+footer{
+
+    background-color: black;
+    color: white; /* Cor da letra */
+    text-align: center; /* Alinhado para o centro */
+    padding: 10px; /* Espaco em cima, baixo e laterais  */
+
+}
